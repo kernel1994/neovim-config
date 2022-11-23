@@ -29,6 +29,12 @@ vim.opt.termguicolors = true
 vim.opt.list = true
 vim.opt.listchars = 'eol:↵,trail:·,tab:>-,nbsp:␣'
 
+-- :h last-position-jump
+vim.cmd [[
+    autocmd BufRead * autocmd FileType <buffer> ++once
+        \ if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif
+]]
+
 require('toggleterm').setup{}
 require('nvim-surround').setup{}
 require'lspconfig'.pylsp.setup{}
