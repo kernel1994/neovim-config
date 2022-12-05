@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}} }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    -- Ensure you have sqlite3 installed locally
+    use { 'nvim-telescope/telescope-frecency.nvim', requires = {'kkharji/sqlite.lua'} }
     use { 'ggandor/lightspeed.nvim', requires = {{'tpope/vim-repeat'}} }
     use 'neovim/nvim-lspconfig'
     use 'jiangmiao/auto-pairs'
