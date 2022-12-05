@@ -72,6 +72,7 @@ keymap("n", "<leader>tf", ":ToggleTerm direction=float<CR>", term_opts)
 -- Telescope --
 local tel_builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', tel_builtin.find_files, {})
+vim.keymap.set('n', '<leader>fr', "<Cmd>lua require('telescope').extensions.frecency.frecency({ workspace = 'CWD'  })<CR>", {})
 vim.keymap.set('n', '<leader>fg', tel_builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', tel_builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', tel_builtin.help_tags, {})
