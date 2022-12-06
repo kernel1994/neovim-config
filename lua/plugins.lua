@@ -19,4 +19,6 @@ return require('packer').startup(function(use)
     use 'lukas-reineke/indent-blankline.nvim'
     use 'preservim/tagbar'
     use 'kernel1994/vim-monokai-tasty'
+    use 'echasnovski/mini.cursorword'
+    use 'echasnovski/mini.comment'
 end)
