@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
     use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}} }
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     -- Ensure you have sqlite3 installed locally
+    -- sudo apt install sqlite3 libsqlite3-dev
     use { 'nvim-telescope/telescope-frecency.nvim', requires = {'kkharji/sqlite.lua'} }
     use { 'ggandor/lightspeed.nvim', requires = {{'tpope/vim-repeat'}} }
     use 'neovim/nvim-lspconfig'
