@@ -21,4 +21,7 @@ return require('packer').startup(function(use)
     use 'kernel1994/vim-monokai-tasty'
     use 'echasnovski/mini.cursorword'
     use 'echasnovski/mini.comment'
+    use 'echasnovski/mini.completion'
+    use 'chentoast/marks.nvim'
+    use 'ojroques/nvim-osc52'
 end)
