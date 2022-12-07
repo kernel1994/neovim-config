@@ -79,3 +79,11 @@ vim.keymap.set('n', '<leader>fh', tel_builtin.help_tags, {})
 
 -- Tagbar --
 keymap('n', '<F8>', ':TagbarToggle<CR>', opts)
+
+-- OSC52 --
+-- In normal mode, <leader>c is an operator that will copy the given text to the clipboard.
+vim.keymap.set('n', '<leader>c', require('osc52').copy_operator, { expr = true })
+-- In normal mode, <leader>cc will copy the current line.
+vim.keymap.set('n', '<leader>cc', '<leader>c_', { remap = true })
+-- In visual mode, <leader>c will copy the current selection.
+vim.keymap.set('x', '<leader>c', require('osc52').copy_visual)
