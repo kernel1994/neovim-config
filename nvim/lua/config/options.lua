@@ -2,6 +2,11 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+-- https://github.com/vscode-neovim/vscode-neovim
+if vim.g.vscode then
+    vim.g.clipboard = vim.g.vscode_clipboard
+end
+
 -- https://www.cnblogs.com/sxrhhh/p/18234652/neovim-copy-anywhere
 -- https://github.com/neovim/neovim/issues/28611
 function my_paste(reg)
